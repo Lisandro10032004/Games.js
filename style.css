@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: rgb(211, 211, 211);
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-top: 100px;
+  background-color: blue;
+  padding: 30px;
+}
+
+.correct {
+  background-color: rgb(4, 194, 4);
+}
+
+.incorrect {
+  background-color: red;
+}
+
+.inicio {
+  text-align: center;
+}
+
+.d-none {
+  display: none;
+}
+
+.inicio {
+  padding: 10px;
+  background-color: rgb(0, 13, 189);
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  outline: none;
+}
+
+.puntuacion {
+  font-size: 30px;
+}
