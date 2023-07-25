@@ -103,7 +103,6 @@ const ejecutarTodo = () => {
   llenarArray();
   mostrar();
   iniciar();
-  console.log(arrayNumeros);
 };
 
 btnInicio.addEventListener("click", () => {
