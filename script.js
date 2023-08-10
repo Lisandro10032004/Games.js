@@ -72,6 +72,7 @@ const iniciar = () => {
           }
         }
       } else {
+        click = "mondongo";
         puntuacion = 0;
         cantidadArray = 4;
         iluminar("incorrect");
@@ -106,7 +107,8 @@ const ejecutarTodo = () => {
 };
 
 btnInicio.addEventListener("click", () => {
-  ejecutarTodo();
+
+  ejecutarTodo()
   btnInicio.classList += " d-none";
 });
 
@@ -123,3 +125,4 @@ const iluminar = (color) => {
     box.classList += ` ${color}`;
   });
 };
+
