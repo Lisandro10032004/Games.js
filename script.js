@@ -1,11 +1,13 @@
 const container = document.querySelector(".container");
 const btnInicio = document.querySelector(".inicio");
 const puntuacionContainer = document.querySelector(".puntuacion");
+const puntuacionMaxContainer = document.querySelector(".puntuacion-max");
 
 let click = "click";
 let selectPosition = 0;
 let tiempoInicio = 1000;
 let puntuacion = 0;
+let puntuacionMax = 0;
 let select = 0;
 let cantidadArray = 4;
 
@@ -57,8 +59,14 @@ const iniciar = () => {
         select++;
         puntuacion = puntuacion + 50;
         puntuacionContainer.innerHTML = `<b class ="puntuacion">Puntuación: ${puntuacion}</b>`;
+        if (puntuacion > puntuacionMax) {
+          puntuacionMax = puntuacion;
+          puntuacionMaxContainer.innerHTML = `<b class ="puntuacion">Puntuación: ${puntuacionMax}</b>`;
+        }
+
         if (select >= cantidadArray) {
           iluminar("correct");
+
           setTimeout(() => {
             reiniciar();
             ejecutarTodo();
@@ -73,6 +81,10 @@ const iniciar = () => {
         }
       } else {
         click = "mondongo";
+        if (puntuacion >= puntuacionMax) {
+          puntuacionMax = puntuacion;
+          puntuacionMaxContainer.innerHTML = `<b class ="puntuacion ">Puntuación máxima: ${puntuacionMax}</b>`;
+        }
         puntuacion = 0;
         cantidadArray = 4;
         iluminar("incorrect");
@@ -107,8 +119,7 @@ const ejecutarTodo = () => {
 };
 
 btnInicio.addEventListener("click", () => {
-
-  ejecutarTodo()
+  ejecutarTodo();
   btnInicio.classList += " d-none";
 });
 
